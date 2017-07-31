@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Products!</title>
+</head>
+<body>
+  <h1>
+    All Products
+  </h1>
+  <ul>
+    <li *ngFor="let product of products">
+      {{product.title}}
+    </li>
+  </ul>
+  <h1>
+    {{title}}
+  </h1>
+
+  <!--<app-messages></app-messages>-->
+
+  <app-form></app-form>
+
+  <!--<input type="text" [(ngModel)]="name" pInputText>-->
+  <!--<br>-->
+  <!--<input type="text" pInputText placeholder="Enter your name" [(ngModel)]="message" (change)="onChangeEvent($event)" />-->
+  <!--<br>-->
+  <!--<input type="text" [(ngModel)]="message" pInputText>-->
+  <!--<br>-->
+  <!--<br>-->
+
+  <!--<button type="button" pButton label="Show" icon="fa fa-check" (click)="onClick($event)"></button>-->
+  <!--<div>{{message}}</div>-->
+
+</body>
+</html>

@@ -5,15 +5,13 @@ import {Component} from "@angular/core";
 
 @Component({
   selector: 'app-root',
-  template: `<h1>All Products</h1>
-  <ul>
-    <li *ngFor="let product of products">
-       {{product.title}}
-    </li>
-  </ul>
-  `})
+  templateUrl: 'app.component.html'
+  })
 export class AppComponent {
 
+  title = 'app works!';
+  name: string;
+  message: string;
   products: Array<string> = [];
 
   theDataSource: Observable<string>;
@@ -23,6 +21,16 @@ export class AppComponent {
     this.theDataSource = this.http.get('/api/products')
       .map(res => res.json());
   }
+
+  onClick() {
+    this.message = 'Hello ' + this.name;
+  }
+
+  onChangeEvent({target}){
+    this.name = target.value;
+    console.log(this.name);
+  }
+
 
   ngOnInit(){
 
